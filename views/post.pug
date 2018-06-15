@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  ul
+    each val in values.length ? values : ['没有内容']
+      li
+        p= val.title
+        p= val.content
+  input(
+    id='addBtn'
+    type='button'
+    name='submit'
+    value='增加'
+  )
+block scripts
+  script(src='../javascripts/jquery.js')
+  script(src='../javascripts/main.js')
